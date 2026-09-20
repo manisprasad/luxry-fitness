@@ -12,7 +12,7 @@ export function Hero() {
       >
         01
       </span>
-      <div className="mx-auto grid w-[min(100%-2rem,1400px)] items-center gap-12 pb-16 pt-32 md:pb-24 md:pt-40 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <div className="mx-auto grid w-[min(100%-2rem,1400px)] items-center gap-12 pb-16 pt-32 md:pb-24 md:pt-40 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="relative z-10">
           <p className="inline-flex items-center gap-2 text-label text-accent">
             <MapPin className="h-4 w-4" strokeWidth={2.5} />
@@ -41,20 +41,24 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="border-2 border-line bg-muted p-2">
+          <div
+            aria-hidden="true"
+            className="absolute -right-4 -top-4 hidden h-24 w-24 border-2 border-accent sm:block"
+          />
+          <div className="relative border-2 border-line bg-white p-4 sm:p-6">
             <Image
-              src={photos.hero.src}
-              alt={photos.hero.alt}
-              width={photos.hero.width}
-              height={photos.hero.height}
+              src={photos.heroLogo.src}
+              alt={photos.heroLogo.alt}
+              width={photos.heroLogo.width}
+              height={photos.heroLogo.height}
               priority
-              sizes="(max-width: 1024px) 92vw, 45vw"
-              className="aspect-[16/10] h-auto w-full object-cover"
+              sizes="(max-width: 640px) 84vw, (max-width: 1024px) 60vw, 40vw"
+              className="aspect-square h-auto w-full object-contain"
             />
           </div>
           <p className="text-label mt-4 flex items-center justify-between">
-            <span>Inside The Gym</span>
-            <span className="text-accent">LF-PB</span>
+            <span>{gym.name}</span>
+            <span className="text-accent">{gym.shortName.toUpperCase()}</span>
           </p>
         </div>
       </div>

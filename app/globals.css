@@ -67,7 +67,7 @@ body {
 
 /* Flow, oversized editorial typography. Uppercase + tight tracking. */
 .text-display {
-  font-size: clamp(3rem, 12vw, 14rem);
+  font-size: clamp(2.5rem, 9.5vw, 12rem);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-transform: uppercase;

@@ -64,6 +64,17 @@ export const photos = {
     width: 547,
     height: 327,
   },
+  /**
+   * Big brand mark for the hero — the original logo, served as PNG.
+   * The source file is a 150×150 JPG; this is a high-quality 600×600
+   * PNG render for crisp large-scale display.
+   */
+  heroLogo: {
+    src: "/photos/logo.png",
+    alt: "Luxury Fitness Punjabi Bagh logo",
+    width: 600,
+    height: 600,
+  },
   motivation: {
     src: "/photos/img-4.webp",
     alt: "Training area at Luxury Fitness Punjabi Bagh",
